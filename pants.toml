@@ -1,0 +1,17 @@
+[GLOBAL]
+pants_version = "2.14.0"
+backend_packages = [
+    "pants.backend.python"
+]
+
+[source]
+marker_filenames = ["Pipfile.lock"]
+
+[python]
+# This will become the default in Pants 2.15.
+tailor_pex_binary_targets = false
+#enable_resolves = true
+
+[anonymous-telemetry]
+enabled = true
+repo_id = "ED3CCABC-6067-47DD-A959-353BC3F02836"
