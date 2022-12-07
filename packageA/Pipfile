@@ -1,6 +1,0 @@
-[packages]
-arrow = "==0.13.1"
-pytest = "==7.0.1"
-
-[requires]
-python_version = "3.8"

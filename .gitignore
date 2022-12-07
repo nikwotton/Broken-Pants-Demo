@@ -1,3 +1,6 @@
+# PyCharm
+.idea/
+
 # Pants workspace files
 /.pants.*
 /dist/
