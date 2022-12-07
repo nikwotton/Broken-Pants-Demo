@@ -16,3 +16,6 @@ repo_id = "ED3CCABC-6067-47DD-A959-353BC3F02836"
 
 [python.resolves]
 My_Resolve = "3rdparty/python/my_resolve.lock"
+
+[python.resolves_to_interpreter_constraints]
+My_Resolve = ["==3.7.*"]
