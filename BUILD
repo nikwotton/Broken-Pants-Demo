@@ -1,9 +1,10 @@
-python_sources(
+python_tests(
     name="root",
     resolve="My_Resolve"
 )
 
 pipenv_requirements(
-    name="pipenv0",
-    resolve="My_Resolve"
+    name="pipenv",
+    resolve="My_Resolve",
+    source="Pipfile.lock"
 )

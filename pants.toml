@@ -4,7 +4,12 @@ backend_packages = [
     "pants.backend.python"
 ]
 
+[source]
+root_patterns = ["/"]
+
 [python]
+#interpreter_constraints = "==3.7.15"
+interpreter_constraints = ["CPython==3.7.15","==3.7.15"]
 # This will become the default in Pants 2.15.
 tailor_pex_binary_targets = false
 enable_resolves = true
@@ -17,4 +22,4 @@ repo_id = "ED3CCABC-6067-47DD-A959-353BC3F02836"
 My_Resolve = "3rdparty/python/my_resolve.lock"
 
 [python.resolves_to_interpreter_constraints]
-My_Resolve = ["==3.7.5"]
+My_Resolve = ["==3.7.15"]
