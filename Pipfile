@@ -1,5 +1,2 @@
-[dev-packages]
-pytest-tornado = "==0.8.1"
-
-[requires]
-python_version = "3.7.15"
+[packages]
+pytest = "==5.4.3"

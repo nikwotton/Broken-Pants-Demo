@@ -1,10 +1,14 @@
 python_tests(
-    name="root",
-    resolve="My_Resolve"
+    name="tests"
 )
 
-pipenv_requirements(
-    name="pipenv",
-    resolve="My_Resolve",
-    source="Pipfile.lock"
+python_sources(
+    name="0",
+    dependencies=[
+        ":pyproject"
+    ]
+)
+resource(
+    name="pyproject",
+    source="pyproject.toml"
 )
