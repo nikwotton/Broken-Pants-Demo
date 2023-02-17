@@ -1,14 +1,9 @@
-python_tests(
-    name="tests"
+python_requirements(
+    name="requirements",
+    source="requirements.txt"
 )
 
-python_sources(
-    name="0",
-    dependencies=[
-        ":pyproject"
-    ]
-)
-resource(
-    name="pyproject",
-    source="pyproject.toml"
+python_tests(
+    name="tests",
+    dependencies=[":requirements"]
 )
