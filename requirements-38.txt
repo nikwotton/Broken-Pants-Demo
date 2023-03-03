@@ -1,0 +1,1 @@
+numpy >=1.21.3,<1.22.0; python_version == '3.8'  # same as cmt-time-aligners
