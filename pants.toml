@@ -8,7 +8,8 @@ backend_packages = [
 root_patterns = ["/"]
 
 [python]
-interpreter_constraints = ["==3.10.8", "==3.8.15"]
+#interpreter_constraints = ["==3.10.8", "==3.8.15"]
+#interpreter_constraints = ["==3.8.15"]
 # This will become the default in Pants 2.15.
 tailor_pex_binary_targets = false
 
@@ -18,23 +19,3 @@ repo_id = "ED3CCABC-6067-47DD-A959-353BC3F02836"
 
 [pytest]
 lockfile = "pants_locks/python/pytest.lock"
-
-
-# toplevel interpreter constraints = X
-# resolve interpreter constraints = Y
-# BUILD interpreter constraints = Z
-# X Y Z
-# 0 0 0 == No matching distributions found for numpy
-# 0 0 1 == No matching distributions found for numpy
-# 0 1 0 == Interpreter constraints not a subset of lockfile constraints
-# 0 1 1 == Success!
-# 1 0 0 == Failed - python 3.7 used for both
-# 1 0 1 == Success!
-# 1 1 0 == Interpreter constraints not a subset of lockfile constraints
-# 1 1 1 == Success!
-
-# Winner:
-# 0 1 1
-# No top level
-# yes resolve constraints
-# yes build level constraints

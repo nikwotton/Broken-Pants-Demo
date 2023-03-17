@@ -1,19 +1,35 @@
 python_requirements(
-    name="requirements37",
-    source="requirements-37.txt"
+    name="reqs0",
 )
 
-python_requirements(
-    name="requirements38",
-    source="requirements-38.txt"
+python_sources(
+    name="root",
 )
 
-# TODO: Idea to think through
-# are resolves still needed? If python_tests has to define its constraints, can multiple tests with different constraints be in the same resolve?
-# python_requirements is the issue - can't do constraints on that....right?
-# Need the resolves, exclusively because pants won't parse the environment markers in the requirements files.
+resource(name="pyproject", source="pyproject.toml")
+python_distribution(
+    name="whl",
+    dependencies=[
+        ":pyproject",
+        ":reqs0",
+        ":root",
+    ],
+    provides=python_artifact(
+        name="whl",
+        version="2.21.0",# TODO
+    ),
+    # Example of setuptools config, other build backends may have other config.
+    wheel_config_settings={"--global-option": ["--python-tag", "py37.py38.py39"]},
+    # Don't use setuptools with a generated setup.py.
+    # You can also turn this off globally in pants.toml:
+    #
+    # [setup-py-generation]
+    # generate_setup_default = false
+    generate_setup = True,
+    sdist = True
+)
 
-python_sources(name="source", sources=["my_file.py"], dependencies=[":requirements37", ":requirements38"], interpreter_constraints=["==3.8.15", "==3.10.8"])
-
-python_tests(name="tests37", interpreter_constraints=["==3.10.8"])
-python_tests(name="tests38", interpreter_constraints=["==3.8.15"])
+python_tests(
+    name="tests0",
+    dependencies=[":reqs0"]
+)
