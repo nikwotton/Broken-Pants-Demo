@@ -14,10 +14,10 @@ enable_resolves = true
 enabled = true
 repo_id = "ED3CCABC-6067-47DD-A959-353BC3F02836"
 
-[python.resolves]
-37 = "3rdparty/python/37.lock"
-310 = "3rdparty/python/310.lock"
+#[python.resolves]
+#37 = "3rdparty/python/37.lock"
+#310 = "3rdparty/python/310.lock"
 
-[python.resolves_to_interpreter_constraints]
-37 = [">=3.7.1,<3.8.0"]
-310 = [">=3.10.0,<3.11.0"]
+#[python.resolves_to_interpreter_constraints]
+#37 = [">=3.7.1,<3.8.0"]
+#310 = [">=3.10.0,<3.11.0"]

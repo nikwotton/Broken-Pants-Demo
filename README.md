@@ -1,3 +1,3 @@
 To reproduce the issue, run the following command in terminal:
 
-`./pants test ::`
+`./pants generate-lockfiles`

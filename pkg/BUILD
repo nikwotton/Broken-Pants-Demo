@@ -11,6 +11,4 @@ python_distribution(
     generate_setup=True,
     sdist=True,
 )
-python_requirements(name="reqs37", source="requirements-37.txt", resolve="37")
-
-python_requirements(name="reqs310", source="requirements-310.txt", resolve="310")
+python_requirements(name="reqs0", source="requirements.txt")
